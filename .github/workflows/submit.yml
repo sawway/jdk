@@ -139,7 +139,7 @@ jobs:
 
       - name: Download boot JDK
         run: |
-          mkdir -p "${HOME}/bootjdk/${BOOT_JDK_VERSION}"
+          mkdir -p "${HOME}/bootjdk/${BOOT_JDK_VERSION}" 
           wget -O "${HOME}/bootjdk/${BOOT_JDK_FILENAME}" "${BOOT_JDK_URL}"
           echo "${BOOT_JDK_SHA256} ${HOME}/bootjdk/${BOOT_JDK_FILENAME}" | sha256sum -c >/dev/null -
           tar -xf "${HOME}/bootjdk/${BOOT_JDK_FILENAME}" -C "${HOME}/bootjdk/${BOOT_JDK_VERSION}"
